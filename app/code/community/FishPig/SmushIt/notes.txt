@@ -6,6 +6,9 @@
  */
 
 CHANGELOG
+- 10/07/2017 - 2.2.0.0
+- Moved over to correct API URL. Please update.
+
 - 21/06/2017 - 2.1.1.4
 - Switched API to https.
 

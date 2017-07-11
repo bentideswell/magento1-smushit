@@ -13,8 +13,8 @@ class Fishpig_SmushIt_Helper_Data extends Mage_Core_Helper_Abstract
 	 *
 	 * @const string
 	 */
-	const API_URL = 'https://www.resmush.it/ws.php';
-	
+	const API_URL = 'http://api.resmush.it/ws.php';
+
 	/**
 	 * Postfix of the meta file
 	 *
