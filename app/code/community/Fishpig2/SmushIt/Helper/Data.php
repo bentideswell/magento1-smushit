@@ -84,9 +84,15 @@ class Fishpig_SmushIt_Helper_Data extends Mage_Core_Helper_Abstract
 			throw new Exception(dirname($file) . ' is not writable.');
 		}
 
+		$postData = array('files' => $this->_curlFileCreate($file));
+		
+		if ($this->_isJpg($file) && ($quality = $this->_getJpgQuality())) {
+			$postData['qlty'] = $quality;
+		}
+
 		$result = @json_decode($this->_curlRequest(self::API_URL, array(
 			CURLOPT_POST => true,
-			CURLOPT_POSTFIELDS => array('files' => $this->_curlFileCreate($file)),
+			CURLOPT_POSTFIELDS => $postData,
 		), $file), true);
 
 		if (!$result) {
@@ -101,7 +107,6 @@ class Fishpig_SmushIt_Helper_Data extends Mage_Core_Helper_Abstract
 
 			return $this;
 		}
-
 
 		$newFile = $this->_curlRequest($result->getDest());
 		
@@ -332,5 +337,31 @@ class Fishpig_SmushIt_Helper_Data extends Mage_Core_Helper_Abstract
 		}
 		
 		throw new Exception('The Magento CRON is not setup. Please setup your Magento CRON for Smush.it to function correctly.');
+	}
+
+	/*
+	 *
+	 *
+	 */
+	protected function _isJpg($file)
+	{
+		$file = strtolower($file);
+
+		return substr($file, -4) === '.jpg' || substr($file, -5) === '.jpeg';
+	}
+	
+	/*
+	 *
+	 *
+	 */
+	protected function _getJpgQuality()
+	{
+		$quality = Mage::getStoreConfig('smushit/jpg/quality');
+		
+		if (empty($quality)) {
+			return false;
+		}
+
+		return max(0, min((int)$quality, 100));
 	}
 }

@@ -6,6 +6,9 @@
  */
 
 CHANGELOG
+- 01/10/2017 - 2.2.1.0
+- Added option to enter quality for JPG images.
+
 - 10/07/2017 - 2.2.0.0
 - Moved over to correct API URL. Please update.
 
