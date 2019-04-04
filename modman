@@ -2,4 +2,3 @@ app/code/community/Fishpig/SmushIt app/code/community/Fishpig/SmushIt
 app/design/adminhtml/default/default/layout/smushit.xml app/design/adminhtml/default/default/layout/smushit.xml
 app/etc/modules/Fishpig_SmushIt.xml app/etc/modules/Fishpig_SmushIt.xml
 shell/smushit.php shell/smushit.php
-var/connect/Fishpig_SmushIt.xml var/connect/Fishpig_SmushIt.xml

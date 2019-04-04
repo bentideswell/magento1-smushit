@@ -1,11 +1,13 @@
-/**
+/*
  * @category Fishpig
  * @package Fishpig_Smushit
- * @license https://fishpig.co.uk/license.txt
  * @author Ben Tideswell <ben@fishpig.co.uk>
  */
 
 CHANGELOG
+- 04/04/2019 - 2.2.1.6
+- Updated modman file
+
 - 01/10/2017 - 2.2.1.0
 - Added option to enter quality for JPG images.
 
