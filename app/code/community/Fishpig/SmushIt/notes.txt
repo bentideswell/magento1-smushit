@@ -5,6 +5,9 @@
  */
 
 CHANGELOG
+- 17/09/2019 - 2.2.1.7
+- Removed obfuscation of Data helper.
+
 - 04/04/2019 - 2.2.1.6
 - Updated modman file
 
