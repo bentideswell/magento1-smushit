@@ -252,7 +252,7 @@ class Fishpig_SmushIt_Helper_Data extends Mage_Core_Helper_Abstract
 	 */
 	protected function _logForFile($file, $msg)
 	{
-		return $this->_log(substr($file, strlen(Mage::getBaseDir('media') + 1)) . ' - ' . $msg);
+		return $this->_log(substr($file, strlen(Mage::getBaseDir('media')) + 1) . ' - ' . $msg);
 	}
 	
 	/**
